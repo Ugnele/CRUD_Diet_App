@@ -1,15 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "4iMnVB3tFJ1JaSVpdqWTYcCaAxUX3JcqFW4Y3aNwmIegpet57T/rufnOInxlZVzkwxv1XkJfel6Ocy3WOgLLaQ==",
+  "dgSpecHash": "vKlUmMAASckVyMnZ2wCeeN+WGykFxKuBtfAjCK8L0afQKw/aWzvEux3TCQt0AzyCGrqTKX5pcBU8Gc7AEAueoQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\ugne.sarakauskaite\\Documents\\gitTrial\\CRUD_Diet_App\\CrudDietApp\\CrudDietApp\\CrudDietApp.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\ugne.sarakauskaite\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
-    "C:\\Users\\ugne.sarakauskaite\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
-    "C:\\Users\\ugne.sarakauskaite\\.nuget\\packages\\swashbuckle.aspnetcore\\5.6.3\\swashbuckle.aspnetcore.5.6.3.nupkg.sha512",
-    "C:\\Users\\ugne.sarakauskaite\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\5.6.3\\swashbuckle.aspnetcore.swagger.5.6.3.nupkg.sha512",
-    "C:\\Users\\ugne.sarakauskaite\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\5.6.3\\swashbuckle.aspnetcore.swaggergen.5.6.3.nupkg.sha512",
-    "C:\\Users\\ugne.sarakauskaite\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\5.6.3\\swashbuckle.aspnetcore.swaggerui.5.6.3.nupkg.sha512"
-  ],
+  "expectedPackageFiles": [],
   "logs": []
 }
