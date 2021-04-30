@@ -1,0 +1,26 @@
+﻿@model IEnumerable<CrudDietApp.Models.Recipe>
+
+@{
+    ViewData["Title"] = "AllRecipes";
+}
+
+<h1>Recipes</h1>
+<p>
+    <a asp-action="CreateRecipe">Add New Recipe</a>
+</p>
+<table id="recipetable">
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    <img src="@Html.DisplayFor(modelItem => item.PictureUrl)" style="width:64px;height:64px;" />
+                    @Html.DisplayFor(modelItem => item.Title)
+                    @Html.ActionLink("Edit", "UpdateRecipe", new { id = item.Id }) |
+                    @Html.ActionLink("More...", "DetailsOfRecipe", new { id = item.Id }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

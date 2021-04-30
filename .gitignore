@@ -1,1 +1,8 @@
+# User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*settings.json
 appsettings.json
