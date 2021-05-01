@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace CrudDietApp.Migrations
 {
-    public partial class InitializeDB : Migration
+    public partial class initializeDB : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -11,23 +11,18 @@ namespace CrudDietApp.Migrations
                 name: "Recipes",
                 columns: table => new
                 {
-                    ID = table.Column<int>(type: "int", nullable: false)
+                    Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
                     Title = table.Column<string>(type: "longtext CHARACTER SET utf8mb4", nullable: true),
                     Method = table.Column<string>(type: "longtext CHARACTER SET utf8mb4", nullable: true),
+                    Ingredients = table.Column<string>(type: "longtext CHARACTER SET utf8mb4", nullable: true),
                     PictureUrl = table.Column<string>(type: "longtext CHARACTER SET utf8mb4", nullable: true),
-                    Kcal = table.Column<int>(type: "int", nullable: false),
-                    Fat = table.Column<int>(type: "int", nullable: false),
-                    Saturated = table.Column<int>(type: "int", nullable: false),
-                    Carbohydrate = table.Column<int>(type: "int", nullable: false),
-                    Sugars = table.Column<int>(type: "int", nullable: false),
-                    Fibre = table.Column<int>(type: "int", nullable: false),
-                    Protein = table.Column<int>(type: "int", nullable: false),
-                    Salt = table.Column<int>(type: "int", nullable: false)
+                    Type = table.Column<int>(type: "int", nullable: false),
+                    CreatedBy = table.Column<string>(type: "longtext CHARACTER SET utf8mb4", nullable: true)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Recipes", x => x.ID);
+                    table.PrimaryKey("PK_Recipes", x => x.Id);
                 });
         }
 

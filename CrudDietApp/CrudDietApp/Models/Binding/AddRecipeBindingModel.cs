@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace CrudDietApp.Models
+﻿namespace CrudDietApp.Models.Binding
 {
-    public class Recipe
+    public class AddRecipeBindingModel
     {
         public int Id { get; set; }
         public string Title { get; set; }
@@ -13,7 +8,5 @@ namespace CrudDietApp.Models
         public string Ingredients { get; set; }
         public string PictureUrl { get; set; }
         public DietType Type { get; set; }
-        public string CreatedBy { get; set; }
-
     }
 }

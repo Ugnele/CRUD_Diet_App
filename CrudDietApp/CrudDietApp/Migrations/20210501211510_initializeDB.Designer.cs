@@ -8,8 +8,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CrudDietApp.Migrations
 {
     [DbContext(typeof(AppDatabases))]
-    [Migration("20210430131229_InitializeDB")]
-    partial class InitializeDB
+    [Migration("20210501211510_initializeDB")]
+    partial class initializeDB
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -20,21 +20,15 @@ namespace CrudDietApp.Migrations
 
             modelBuilder.Entity("CrudDietApp.Models.Recipe", b =>
                 {
-                    b.Property<int>("ID")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    b.Property<int>("Carbohydrate")
-                        .HasColumnType("int");
+                    b.Property<string>("CreatedBy")
+                        .HasColumnType("longtext CHARACTER SET utf8mb4");
 
-                    b.Property<int>("Fat")
-                        .HasColumnType("int");
-
-                    b.Property<int>("Fibre")
-                        .HasColumnType("int");
-
-                    b.Property<int>("Kcal")
-                        .HasColumnType("int");
+                    b.Property<string>("Ingredients")
+                        .HasColumnType("longtext CHARACTER SET utf8mb4");
 
                     b.Property<string>("Method")
                         .HasColumnType("longtext CHARACTER SET utf8mb4");
@@ -42,22 +36,13 @@ namespace CrudDietApp.Migrations
                     b.Property<string>("PictureUrl")
                         .HasColumnType("longtext CHARACTER SET utf8mb4");
 
-                    b.Property<int>("Protein")
-                        .HasColumnType("int");
-
-                    b.Property<int>("Salt")
-                        .HasColumnType("int");
-
-                    b.Property<int>("Saturated")
-                        .HasColumnType("int");
-
-                    b.Property<int>("Sugars")
-                        .HasColumnType("int");
-
                     b.Property<string>("Title")
                         .HasColumnType("longtext CHARACTER SET utf8mb4");
 
-                    b.HasKey("ID");
+                    b.Property<int>("Type")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
 
                     b.ToTable("Recipes");
                 });
