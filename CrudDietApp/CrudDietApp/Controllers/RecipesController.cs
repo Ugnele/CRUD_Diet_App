@@ -44,5 +44,12 @@ namespace CrudDietApp.Controllers
             databases.SaveChanges();
             return RedirectToAction("Index");
         }
+
+        [Route("details/{id:int}")]
+        public IActionResult DetailsOfRecipe(int id)
+        {
+            var recipeWithId = databases.Recipes.FirstOrDefault(r => r.Id == id);
+            return View(recipeWithId);
+        }
     }
 }

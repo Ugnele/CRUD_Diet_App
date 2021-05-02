@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CrudDietApp.Migrations
 {
     [DbContext(typeof(AppDatabases))]
-    [Migration("20210501211510_initializeDB")]
+    [Migration("20210502072321_initializeDB")]
     partial class initializeDB
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
