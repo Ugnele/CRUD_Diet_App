@@ -51,5 +51,27 @@ namespace CrudDietApp.Controllers
             var recipeWithId = databases.Recipes.FirstOrDefault(r => r.Id == id);
             return View(recipeWithId);
         }
+
+
+        [Route("update/{id:int}")]
+        public IActionResult UpdateRecipe(int id)
+        {
+            var recipeWithId = databases.Recipes.FirstOrDefault(r => r.Id == id);
+            return View(recipeWithId);
+        }
+
+        [HttpPost]
+        [Route("update/{id:int}")]
+        public IActionResult UpdateRecipe(Recipe recipe, int id)
+        {
+            var updatedRecipe = databases.Recipes.FirstOrDefault(r => r.Id == id);
+            updatedRecipe.Title = recipe.Title;
+            updatedRecipe.Ingredients = recipe.Ingredients;
+            updatedRecipe.Method = recipe.Method;
+            updatedRecipe.PictureUrl = recipe.PictureUrl;
+            updatedRecipe.Type = recipe.Type;
+            databases.SaveChanges();
+            return RedirectToAction("Index");
+        }
     }
 }

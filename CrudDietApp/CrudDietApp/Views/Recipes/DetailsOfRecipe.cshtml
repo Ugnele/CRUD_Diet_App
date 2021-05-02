@@ -5,7 +5,7 @@
 }
 
 <h1>
-    Making the @Html.DisplayFor(model => model.Title)
+    Making the @Model.Title
 </h1>
 
 <div>
@@ -32,6 +32,6 @@
     </dl>
 </div>
 <div>
-    @Html.ActionLink("Edit", "Update", new { id = Model.Id }) |
+    @Html.ActionLink("Edit", "UpdateRecipe", new { id = Model.Id }) |
     <a asp-action="Index">Back to Recipe List</a>
 </div>
