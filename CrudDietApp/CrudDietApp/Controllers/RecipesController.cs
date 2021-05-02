@@ -73,5 +73,14 @@ namespace CrudDietApp.Controllers
             databases.SaveChanges();
             return RedirectToAction("Index");
         }
+
+        [Route("delete/{id:int}")]
+        public IActionResult DeleteRecipe(int id)
+        {
+            var recipeToDelete = databases.Recipes.FirstOrDefault(r => r.Id == id);
+            databases.Recipes.Remove(recipeToDelete);
+            databases.SaveChanges();
+            return RedirectToAction("Index");
+        }
     }
 }
