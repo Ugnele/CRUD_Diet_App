@@ -122,3 +122,7 @@ C:\Users\ugne.sarakauskaite\Documents\gitTrial\CRUD_Diet_App\CrudDietApp\CrudDie
 C:\Users\ugne.sarakauskaite\Documents\gitTrial\CRUD_Diet_App\CrudDietApp\CrudDietApp\obj\Debug\net5.0\Razor\Views\Recipes\CreateRecipe.cshtml.g.cs
 C:\Users\ugne.sarakauskaite\Documents\gitTrial\CRUD_Diet_App\CrudDietApp\CrudDietApp\obj\Debug\net5.0\Razor\Views\Recipes\DetailsOfRecipe.cshtml.g.cs
 C:\Users\ugne.sarakauskaite\Documents\gitTrial\CRUD_Diet_App\CrudDietApp\CrudDietApp\obj\Debug\net5.0\Razor\Views\Recipes\UpdateRecipe.cshtml.g.cs
+C:\Users\ugne.sarakauskaite\Documents\gitTrial\CRUD_Diet_App\CrudDietApp\CrudDietApp\obj\Debug\net5.0\Razor\Views\Users\CreateUser.cshtml.g.cs
+C:\Users\ugne.sarakauskaite\Documents\gitTrial\CRUD_Diet_App\CrudDietApp\CrudDietApp\obj\Debug\net5.0\Razor\Views\Users\DetailsOfUser.cshtml.g.cs
+C:\Users\ugne.sarakauskaite\Documents\gitTrial\CRUD_Diet_App\CrudDietApp\CrudDietApp\obj\Debug\net5.0\Razor\Views\Users\Index.cshtml.g.cs
+C:\Users\ugne.sarakauskaite\Documents\gitTrial\CRUD_Diet_App\CrudDietApp\CrudDietApp\obj\Debug\net5.0\Razor\Views\Users\UpdateUser.cshtml.g.cs

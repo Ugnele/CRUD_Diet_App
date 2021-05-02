@@ -1,0 +1,49 @@
+﻿@model IEnumerable<CrudDietApp.Models.User>
+
+@{
+    ViewData["Title"] = "AllUsers";
+}
+
+
+<style>
+    table, th, td {
+        padding: 25px;
+    }
+</style>
+
+<h1>Our Community</h1>
+<p>
+    <a asp-action="CreateUser">Create New Account</a>
+</p>
+<table>
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Username)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.About)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td>
+                <img src="@Html.DisplayFor(modelItem => item.PictureUrl)" style="width:164px" />
+
+                <BR>
+                @Html.DisplayFor(modelItem => item.Username)
+                <br>
+                @Html.ActionLink("Edit", "UpdateUser", new { id = item.Id }) |
+                @Html.ActionLink("More...", "DetailsOfUser", new { id = item.Id }) |
+                @Html.ActionLink("Delete", "DeleteUser", new { id = item.Id })
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.About)
+            </td>
+        </tr>
+         }
+        </tbody>
+</table>

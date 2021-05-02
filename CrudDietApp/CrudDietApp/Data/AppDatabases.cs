@@ -11,5 +11,7 @@ namespace CrudDietApp.Data
     {
         public AppDatabases(DbContextOptions<AppDatabases> options) : base(options) { }
         public DbSet<Recipe> Recipes { get; set; }
+        public DbSet<User> Users { get; set; }
+
     }
 }

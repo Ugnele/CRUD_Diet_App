@@ -3,14 +3,16 @@ using System;
 using CrudDietApp.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace CrudDietApp.Migrations
 {
     [DbContext(typeof(AppDatabases))]
-    partial class AppDatabasesModelSnapshot : ModelSnapshot
+    [Migration("20210502181906_dbForUsers")]
+    partial class dbForUsers
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
