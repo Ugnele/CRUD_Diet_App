@@ -17,7 +17,7 @@ namespace CrudDietApp.Controllers
         {
             databases = appDatabases;
         }
-        
+
         //shows existing recipes
         public IActionResult Index()
         {
@@ -30,15 +30,17 @@ namespace CrudDietApp.Controllers
             return View();
         }
         [HttpPost]
-        public IActionResult CreateRecipe(AddRecipeBindingModel bm)
+        public IActionResult CreateRecipe(AddRecipeBindingModel bm)//, int createdById
         {
+            //bm.CreatedById = createdById;
             var newRecipe = new Recipe
             {
                 Title = bm.Title,
                 Method = bm.Method,
                 Ingredients = bm.Ingredients,
                 Type = bm.Type,
-                PictureUrl = bm.PictureUrl
+                PictureUrl = bm.PictureUrl,
+                //CreatedBy = databases.Users.FirstOrDefault(u => u.Id == createdById),
             };
             databases.Recipes.Add(newRecipe);
             databases.SaveChanges();

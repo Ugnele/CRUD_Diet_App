@@ -84,5 +84,41 @@ namespace CrudDietApp.Controllers
             databases.SaveChanges();
             return RedirectToAction("Index");
         }
+
+        //___________________________________________________________________________
+        //Recipe actions from user account
+
+        public IActionResult CreateRecipe(int createdById)
+        {
+            var user = databases.Users.FirstOrDefault(u => u.Id == createdById);
+            ViewBag.Username = user.Username;
+            return View();
+        }
+        [HttpPost]
+        public IActionResult CreateRecipe(AddRecipeBindingModel bm, int createdById)
+        {
+            bm.CreatedById = createdById;
+            var newRecipe = new Recipe
+            {
+                Title = bm.Title,
+                Method = bm.Method,
+                Ingredients = bm.Ingredients,
+                Type = bm.Type,
+                PictureUrl = bm.PictureUrl,
+                CreatedBy = databases.Users.FirstOrDefault(u => u.Id == createdById),
+            };
+            databases.Recipes.Add(newRecipe);
+            databases.SaveChanges();
+            return RedirectToAction("Index");
+        }
+        //Display All users recipes
+        [Route("{id:int}/recipes")]
+        public IActionResult ViewRecipes(int id)
+        {
+            var user = databases.Users.FirstOrDefault(u => u.Id == id);
+            var recipes = databases.Recipes.Where(r => r.CreatedBy.Id == id).ToList();
+            ViewBag.Username = user.Username;
+            return View(recipes);
+        }
     }
 }

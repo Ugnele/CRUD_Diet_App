@@ -7,6 +7,7 @@ namespace CrudDietApp.Models.Binding
 {
     public class AddUserBindingModel
     {
+        public int Id { get; set; }
         public string Username { get; set; }
         public string About { get; set; }
         public string Email { get; set; }

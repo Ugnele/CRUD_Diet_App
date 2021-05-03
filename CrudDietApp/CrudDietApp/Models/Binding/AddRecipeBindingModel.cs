@@ -8,5 +8,6 @@
         public string Ingredients { get; set; }
         public string PictureUrl { get; set; }
         public DietType Type { get; set; }
+        public int CreatedById { get; set; }
     }
 }

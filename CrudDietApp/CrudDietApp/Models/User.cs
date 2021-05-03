@@ -15,6 +15,6 @@ namespace CrudDietApp.Models
         public int Age { get; set; }
         public string About { get; set; }
         public string PictureUrl { get; set; }
-        public virtual List<Recipe> UsersRecipes { get; set; }
+        public virtual List<Recipe> Recipes { get; set; }
     }
 }

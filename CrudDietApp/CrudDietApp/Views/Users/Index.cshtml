@@ -24,26 +24,41 @@
             <th>
                 @Html.DisplayNameFor(model => model.About)
             </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Recipes)
+            </th>
         </tr>
     </thead>
     <tbody>
         @foreach (var item in Model)
         {
-        <tr>
-            <td>
-                <img src="@Html.DisplayFor(modelItem => item.PictureUrl)" style="width:164px" />
-
-                <BR>
-                @Html.DisplayFor(modelItem => item.Username)
-                <br>
-                @Html.ActionLink("Edit", "UpdateUser", new { id = item.Id }) |
-                @Html.ActionLink("More...", "DetailsOfUser", new { id = item.Id }) |
-                @Html.ActionLink("Delete", "DeleteUser", new { id = item.Id })
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.About)
-            </td>
-        </tr>
+            <tr>
+                <td>
+                    <img src="@Html.DisplayFor(modelItem => item.PictureUrl)" style="width:164px" />
+                    <BR>
+                    @Html.DisplayFor(modelItem => item.Username)
+                    <br>
+                    @Html.ActionLink("Edit", "UpdateUser", new { id = item.Id }) |
+                    @Html.ActionLink("More...", "DetailsOfUser", new { id = item.Id }) |
+                    @Html.ActionLink("Delete", "DeleteUser", new { id = item.Id })
+                    <br>
+                    @Html.ActionLink("Add a new recipe!", "CreateRecipe", new { createdById = item.Id })
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.About)
+                </td>
+                <td>
+                    @try
+                    {
+                        item.Recipes.Any();
+                        @Html.DisplayFor(modelItem => item.Recipes);
+                    }
+                    catch (ArgumentNullException e)
+                    {
+                        @Html.DisplayText("No recipes to show yet :)");
+                    }
+                </td>
+          </tr>
          }
         </tbody>
 </table>

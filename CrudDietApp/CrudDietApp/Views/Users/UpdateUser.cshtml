@@ -1,4 +1,5 @@
 ﻿@model CrudDietApp.Models.User
+
 @{
     ViewData["Title"] = "UpdateUser";
 }
@@ -38,6 +39,9 @@
                 <label asp-for="PictureUrl" class="control-label"></label>
                 <input asp-for="PictureUrl" class="form-control" />
                 <span asp-validation-for="PictureUrl" class="text-danger"></span>
+            </div>
+            <div>
+                @Html.ActionLink("Add a new recipe!", "CreateRecipe", new { UserId = Model.Id })
             </div>
             <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-primary" />
