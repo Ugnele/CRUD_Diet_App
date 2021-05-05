@@ -13,7 +13,7 @@ namespace CrudDietApp.Models
         public string Ingredients { get; set; }
         public string PictureUrl { get; set; }
         public DietType Type { get; set; }
-        public User CreatedBy { get; set; }
+        public virtual User CreatedBy { get; set; }
 
     }
 }

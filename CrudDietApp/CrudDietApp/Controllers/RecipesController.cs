@@ -2,6 +2,7 @@
 using CrudDietApp.Models;
 using CrudDietApp.Models.Binding;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -30,9 +31,8 @@ namespace CrudDietApp.Controllers
             return View();
         }
         [HttpPost]
-        public IActionResult CreateRecipe(AddRecipeBindingModel bm)//, int createdById
+        public IActionResult CreateRecipe(AddRecipeBindingModel bm)
         {
-            //bm.CreatedById = createdById;
             var newRecipe = new Recipe
             {
                 Title = bm.Title,
@@ -40,17 +40,17 @@ namespace CrudDietApp.Controllers
                 Ingredients = bm.Ingredients,
                 Type = bm.Type,
                 PictureUrl = bm.PictureUrl,
-                //CreatedBy = databases.Users.FirstOrDefault(u => u.Id == createdById),
+                //CreatedById = bm.CreatedById,
             };
             databases.Recipes.Add(newRecipe);
             databases.SaveChanges();
             return RedirectToAction("Index");
         }
 
-        [Route("details/{id:int}")]
+        [Route("recipes/details/{id:int}")]
         public IActionResult DetailsOfRecipe(int id)
         {
-            var recipeWithId = databases.Recipes.FirstOrDefault(r => r.Id == id);
+            var recipeWithId = databases.Recipes.Include(u=>u.CreatedBy).FirstOrDefault(r => r.Id == id);
             return View(recipeWithId);
         }
 

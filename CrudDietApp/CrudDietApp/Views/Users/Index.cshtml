@@ -48,17 +48,21 @@
                     @Html.DisplayFor(modelItem => item.About)
                 </td>
                 <td>
-                    @try
+                    @if (item.Recipes == null)
                     {
-                        item.Recipes.Any();
-                        @Html.DisplayFor(modelItem => item.Recipes);
+                        @Html.DisplayName("No recipes to show yet :)")
                     }
-                    catch (ArgumentNullException e)
+                    else
                     {
-                        @Html.DisplayText("No recipes to show yet :)");
+                        <ul>
+                            @foreach (var recipe in item.Recipes)
+                            {
+                                <li><a href="@Url.Action("Details", "Recipes", new { id = recipe.Id })">@recipe.Title</a></li>
+                            }
+                        </ul>
                     }
                 </td>
-          </tr>
-         }
-        </tbody>
+            </tr>
+        }
+    </tbody>
 </table>

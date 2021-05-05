@@ -2,6 +2,7 @@
 using CrudDietApp.Models;
 using CrudDietApp.Models.Binding;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,7 +22,8 @@ namespace CrudDietApp.Controllers
         //shows existing users
         public IActionResult Index()
         {
-            var users = databases.Users.ToList();
+            var users = databases.Users.Include(r=>r.Recipes).ToList();
+            ViewBag.Users = users;
             return View(users);
         }
 
@@ -49,7 +51,7 @@ namespace CrudDietApp.Controllers
         [Route("user/details/{id:int}")]
         public IActionResult DetailsOfUser(int id)
         {
-            var userWithId = databases.Users.FirstOrDefault(u => u.Id == id);
+            var userWithId = databases.Users.Include(r=>r.Recipes).FirstOrDefault(u => u.Id == id);
             return View(userWithId);
         }
 
@@ -65,13 +67,13 @@ namespace CrudDietApp.Controllers
         [Route("user/update/{id:int}")]
         public IActionResult UpdateUser(User user, int id)
         {
-            var updatedUser = databases.Users.FirstOrDefault(r => r.Id == id);
-            updatedUser.Username = user.Username;
-            updatedUser.Password = user.Password;
-            updatedUser.Email = user.Email;
-            updatedUser.Age = user.Age;
-            updatedUser.About = user.About;
-            updatedUser.PictureUrl = user.PictureUrl;
+            var userToBeUpdated = databases.Users.FirstOrDefault(u => u.Id == id);
+            userToBeUpdated.Username = user.Username;
+            userToBeUpdated.Password = user.Password;
+            userToBeUpdated.Email = user.Email;
+            userToBeUpdated.Age = user.Age;
+            userToBeUpdated.About = user.About;
+            userToBeUpdated.PictureUrl = user.PictureUrl;
             databases.SaveChanges();
             return RedirectToAction("Index");
         }
@@ -88,6 +90,7 @@ namespace CrudDietApp.Controllers
         //___________________________________________________________________________
         //Recipe actions from user account
 
+        [Route("createrecipe/{createdById:int}")]
         public IActionResult CreateRecipe(int createdById)
         {
             var user = databases.Users.FirstOrDefault(u => u.Id == createdById);
@@ -95,6 +98,7 @@ namespace CrudDietApp.Controllers
             return View();
         }
         [HttpPost]
+        [Route("createrecipe/{createdById:int}")]
         public IActionResult CreateRecipe(AddRecipeBindingModel bm, int createdById)
         {
             bm.CreatedById = createdById;
@@ -105,20 +109,30 @@ namespace CrudDietApp.Controllers
                 Ingredients = bm.Ingredients,
                 Type = bm.Type,
                 PictureUrl = bm.PictureUrl,
-                CreatedBy = databases.Users.FirstOrDefault(u => u.Id == createdById),
+                CreatedBy = databases.Users.FirstOrDefault(u => u.Id == createdById)
             };
             databases.Recipes.Add(newRecipe);
             databases.SaveChanges();
+            //databases.Users.FirstOrDefault(u => u.Id == createdById).Recipes.Add(newRecipe);
+            //databases.SaveChanges();
             return RedirectToAction("Index");
         }
+
         //Display All users recipes
-        [Route("{id:int}/recipes")]
+        [Route("recipes/{id:int}")]
         public IActionResult ViewRecipes(int id)
         {
             var user = databases.Users.FirstOrDefault(u => u.Id == id);
-            var recipes = databases.Recipes.Where(r => r.CreatedBy.Id == id).ToList();
+            var recipes = databases.Recipes.Include(u=>u.CreatedBy).Where(r => r.CreatedBy.Id == id).ToList();
             ViewBag.Username = user.Username;
             return View(recipes);
+        }
+
+        //Authentication
+        public Boolean Login(int id, string username, string password)
+        {
+            var user = databases.Users.FirstOrDefault(u => u.Id == id);
+            return user.Username == username && user.Password == password;
         }
     }
 }
