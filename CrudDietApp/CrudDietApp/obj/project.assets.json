@@ -1153,6 +1153,16 @@
         "runtime": {
           "lib/netcoreapp2.1/_._": {}
         }
+      },
+      "DietWebLibrary/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/DietWebLibrary.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DietWebLibrary.dll": {}
+        }
       }
     }
   },
@@ -4193,10 +4203,16 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+    },
+    "DietWebLibrary/1.0.0": {
+      "type": "project",
+      "path": "../DietWebLibrary/DietWebLibrary.csproj",
+      "msbuildProject": "../DietWebLibrary/DietWebLibrary.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net5.0": [
+      "DietWebLibrary >= 1.0.0",
       "Microsoft.EntityFrameworkCore >= 5.0.0",
       "Microsoft.EntityFrameworkCore.Relational >= 5.0.0",
       "Microsoft.EntityFrameworkCore.Tools >= 5.0.0",
@@ -4230,7 +4246,11 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\ugne.sarakauskaite\\Documents\\gitTrial\\CRUD_Diet_App\\CrudDietApp\\DietWebLibrary\\DietWebLibrary.csproj": {
+              "projectPath": "C:\\Users\\ugne.sarakauskaite\\Documents\\gitTrial\\CRUD_Diet_App\\CrudDietApp\\DietWebLibrary\\DietWebLibrary.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

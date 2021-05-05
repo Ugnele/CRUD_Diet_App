@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace CrudDietApp.Models
+namespace CrudDietLibrary.Models
 {
     public class Recipe
     {

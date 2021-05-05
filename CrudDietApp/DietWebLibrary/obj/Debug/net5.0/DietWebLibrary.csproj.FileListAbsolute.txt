@@ -1,0 +1,12 @@
+C:\Users\ugne.sarakauskaite\Documents\gitTrial\CRUD_Diet_App\CrudDietApp\DietWebLibrary\bin\Debug\net5.0\DietWebLibrary.deps.json
+C:\Users\ugne.sarakauskaite\Documents\gitTrial\CRUD_Diet_App\CrudDietApp\DietWebLibrary\bin\Debug\net5.0\DietWebLibrary.dll
+C:\Users\ugne.sarakauskaite\Documents\gitTrial\CRUD_Diet_App\CrudDietApp\DietWebLibrary\bin\Debug\net5.0\ref\DietWebLibrary.dll
+C:\Users\ugne.sarakauskaite\Documents\gitTrial\CRUD_Diet_App\CrudDietApp\DietWebLibrary\bin\Debug\net5.0\DietWebLibrary.pdb
+C:\Users\ugne.sarakauskaite\Documents\gitTrial\CRUD_Diet_App\CrudDietApp\DietWebLibrary\obj\Debug\net5.0\DietWebLibrary.csprojAssemblyReference.cache
+C:\Users\ugne.sarakauskaite\Documents\gitTrial\CRUD_Diet_App\CrudDietApp\DietWebLibrary\obj\Debug\net5.0\DietWebLibrary.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ugne.sarakauskaite\Documents\gitTrial\CRUD_Diet_App\CrudDietApp\DietWebLibrary\obj\Debug\net5.0\DietWebLibrary.AssemblyInfoInputs.cache
+C:\Users\ugne.sarakauskaite\Documents\gitTrial\CRUD_Diet_App\CrudDietApp\DietWebLibrary\obj\Debug\net5.0\DietWebLibrary.AssemblyInfo.cs
+C:\Users\ugne.sarakauskaite\Documents\gitTrial\CRUD_Diet_App\CrudDietApp\DietWebLibrary\obj\Debug\net5.0\DietWebLibrary.csproj.CoreCompileInputs.cache
+C:\Users\ugne.sarakauskaite\Documents\gitTrial\CRUD_Diet_App\CrudDietApp\DietWebLibrary\obj\Debug\net5.0\DietWebLibrary.dll
+C:\Users\ugne.sarakauskaite\Documents\gitTrial\CRUD_Diet_App\CrudDietApp\DietWebLibrary\obj\Debug\net5.0\ref\DietWebLibrary.dll
+C:\Users\ugne.sarakauskaite\Documents\gitTrial\CRUD_Diet_App\CrudDietApp\DietWebLibrary\obj\Debug\net5.0\DietWebLibrary.pdb

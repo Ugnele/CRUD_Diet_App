@@ -1,30 +1,31 @@
-﻿@model IEnumerable<CrudDietApp.Models.Recipe>
+﻿@using CrudDietLibrary.Models;
+@model IEnumerable<CrudDietLibrary.Models.Recipe>
 
-@{
-    ViewData["Title"] = "AllRecipes";
-}
+    @{
+        ViewData["Title"] = "AllRecipes";
+    }
 
-<h1>Recipes</h1>
-<p>
-    <a asp-action="CreateRecipe">Add New Recipe</a>
-</p>
-<table id="recipetable">
-    <tbody>
-        <tr>
-            @foreach (var item in Model)
-            {
-                <td>
-                    <img src="@Html.DisplayFor(modelItem => item.PictureUrl)" style="width:164px" />
-                    <BR>
-                    @Html.DisplayFor(modelItem => item.Title)
-                    <BR>
-                    @((item.Type == DietType.Omnivore) ? "" : Html.DisplayFor(modelItem => item.Type))
-                    <BR>
-                    @Html.ActionLink("Edit", "UpdateRecipe", new { id = item.Id }) |
-                    @Html.ActionLink("More...", "DetailsOfRecipe", new { id = item.Id }) |
-                    @Html.ActionLink("Delete", "DeleteRecipe", new { id = item.Id })
-                </td>
+    <h1>Recipes</h1>
+    <p>
+        <a asp-action="CreateRecipe">Add New Recipe</a>
+    </p>
+    <table id="recipetable">
+        <tbody>
+            <tr>
+                @foreach (var item in Model)
+                {
+                    <td>
+                        <img src="@Html.DisplayFor(modelItem => item.PictureUrl)" style="width:164px" />
+                        <BR>
+                        @Html.DisplayFor(modelItem => item.Title)
+                        <BR>
+                        @((item.Type == DietType.Omnivore) ? "" : Html.DisplayFor(modelItem => item.Type))
+                        <BR>
+                        @Html.ActionLink("Edit", "UpdateRecipe", new { id = item.Id }) |
+                        @Html.ActionLink("More...", "DetailsOfRecipe", new { id = item.Id }) |
+                        @Html.ActionLink("Delete", "DeleteRecipe", new { id = item.Id })
+                    </td>
                 }
-        </tr>
-    </tbody>
-</table>
+            </tr>
+        </tbody>
+    </table>

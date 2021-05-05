@@ -1,4 +1,4 @@
-﻿using CrudDietApp.Models;
+﻿using CrudDietLibrary.Models;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;

@@ -1,4 +1,4 @@
-﻿namespace CrudDietApp.Models.Binding
+﻿namespace CrudDietLibrary.Models.Binding
 {
     public class AddRecipeBindingModel
     {

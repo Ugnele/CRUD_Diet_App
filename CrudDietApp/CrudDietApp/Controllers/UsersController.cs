@@ -1,6 +1,6 @@
 ﻿using CrudDietApp.Data;
-using CrudDietApp.Models;
-using CrudDietApp.Models.Binding;
+using CrudDietLibrary.Models;
+using CrudDietLibrary.Models.Binding;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System;

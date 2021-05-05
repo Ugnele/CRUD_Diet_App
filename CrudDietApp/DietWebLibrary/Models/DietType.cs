@@ -1,4 +1,4 @@
-﻿namespace CrudDietApp.Models
+﻿namespace CrudDietLibrary.Models
 {
     public enum DietType
     {
