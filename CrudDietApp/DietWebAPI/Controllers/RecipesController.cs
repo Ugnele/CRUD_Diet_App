@@ -18,11 +18,19 @@ namespace CrudDietAPI.Controllers
             databases = applicationDbContext;
         }
 
-        [HttpGet]
+        [HttpGet("")]
         public IActionResult GetAllRecipes()
         {
             var recipes = databases.Recipes.ToList();
             return Ok(recipes);
+        }
+
+        [HttpGet("{id:int}")]
+        public IActionResult GetRecipeWithId(int id)
+        {
+            var recipeWithId = databases.Recipes.FirstOrDefault(r => r.Id == id);
+            if (recipeWithId == null) return NotFound();
+            return Ok(recipeWithId);
         }
     }
 }
