@@ -1,0 +1,7 @@
+C:\Users\ugne.sarakauskaite\Documents\gitTrial\CRUD_Diet_App\CrudDietApp\DietWebAPI\obj\Debug\net5.0\DietWebAPI.csprojAssemblyReference.cache
+C:\Users\ugne.sarakauskaite\Documents\gitTrial\CRUD_Diet_App\CrudDietApp\DietWebAPI\obj\Debug\net5.0\DietWebAPI.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ugne.sarakauskaite\Documents\gitTrial\CRUD_Diet_App\CrudDietApp\DietWebAPI\obj\Debug\net5.0\DietWebAPI.AssemblyInfoInputs.cache
+C:\Users\ugne.sarakauskaite\Documents\gitTrial\CRUD_Diet_App\CrudDietApp\DietWebAPI\obj\Debug\net5.0\DietWebAPI.AssemblyInfo.cs
+C:\Users\ugne.sarakauskaite\Documents\gitTrial\CRUD_Diet_App\CrudDietApp\DietWebAPI\obj\Debug\net5.0\DietWebAPI.csproj.CoreCompileInputs.cache
+C:\Users\ugne.sarakauskaite\Documents\gitTrial\CRUD_Diet_App\CrudDietApp\DietWebAPI\obj\Debug\net5.0\DietWebAPI.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\ugne.sarakauskaite\Documents\gitTrial\CRUD_Diet_App\CrudDietApp\DietWebAPI\obj\Debug\net5.0\DietWebAPI.MvcApplicationPartsAssemblyInfo.cache

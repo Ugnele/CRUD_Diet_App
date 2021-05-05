@@ -1154,14 +1154,14 @@
           "lib/netcoreapp2.1/_._": {}
         }
       },
-      "DietWebLibrary/1.0.0": {
+      "CrudDietLibrary/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
         "compile": {
-          "bin/placeholder/DietWebLibrary.dll": {}
+          "bin/placeholder/CrudDietLibrary.dll": {}
         },
         "runtime": {
-          "bin/placeholder/DietWebLibrary.dll": {}
+          "bin/placeholder/CrudDietLibrary.dll": {}
         }
       }
     }
@@ -4204,15 +4204,15 @@
         "version.txt"
       ]
     },
-    "DietWebLibrary/1.0.0": {
+    "CrudDietLibrary/1.0.0": {
       "type": "project",
-      "path": "../DietWebLibrary/DietWebLibrary.csproj",
-      "msbuildProject": "../DietWebLibrary/DietWebLibrary.csproj"
+      "path": "../DietWebLibrary/CrudDietLibrary.csproj",
+      "msbuildProject": "../DietWebLibrary/CrudDietLibrary.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net5.0": [
-      "DietWebLibrary >= 1.0.0",
+      "CrudDietLibrary >= 1.0.0",
       "Microsoft.EntityFrameworkCore >= 5.0.0",
       "Microsoft.EntityFrameworkCore.Relational >= 5.0.0",
       "Microsoft.EntityFrameworkCore.Tools >= 5.0.0",
@@ -4247,8 +4247,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Users\\ugne.sarakauskaite\\Documents\\gitTrial\\CRUD_Diet_App\\CrudDietApp\\DietWebLibrary\\DietWebLibrary.csproj": {
-              "projectPath": "C:\\Users\\ugne.sarakauskaite\\Documents\\gitTrial\\CRUD_Diet_App\\CrudDietApp\\DietWebLibrary\\DietWebLibrary.csproj"
+            "C:\\Users\\ugne.sarakauskaite\\Documents\\gitTrial\\CRUD_Diet_App\\CrudDietApp\\DietWebLibrary\\CrudDietLibrary.csproj": {
+              "projectPath": "C:\\Users\\ugne.sarakauskaite\\Documents\\gitTrial\\CRUD_Diet_App\\CrudDietApp\\DietWebLibrary\\CrudDietLibrary.csproj"
             }
           }
         }

@@ -13,9 +13,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ugne.sarakauskaite\\Documents\\gitTrial\\CRUD_Diet_App\\CrudDietApp\\DietWebLibrary\\DietWebLibrary.csproj",
-      "projectName": "DietWebLibrary",
-      "projectPath": "C:\\Users\\ugne.sarakauskaite\\Documents\\gitTrial\\CRUD_Diet_App\\CrudDietApp\\DietWebLibrary\\DietWebLibrary.csproj",
+      "projectUniqueName": "C:\\Users\\ugne.sarakauskaite\\Documents\\gitTrial\\CRUD_Diet_App\\CrudDietApp\\DietWebLibrary\\CrudDietLibrary.csproj",
+      "projectName": "CrudDietLibrary",
+      "projectPath": "C:\\Users\\ugne.sarakauskaite\\Documents\\gitTrial\\CRUD_Diet_App\\CrudDietApp\\DietWebLibrary\\CrudDietLibrary.csproj",
       "packagesPath": "C:\\Users\\ugne.sarakauskaite\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\ugne.sarakauskaite\\Documents\\gitTrial\\CRUD_Diet_App\\CrudDietApp\\DietWebLibrary\\obj\\",
       "projectStyle": "PackageReference",
