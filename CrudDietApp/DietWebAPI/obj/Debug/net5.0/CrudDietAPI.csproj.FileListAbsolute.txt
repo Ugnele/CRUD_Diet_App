@@ -6,7 +6,6 @@ C:\Users\ugne.sarakauskaite\Documents\gitTrial\CRUD_Diet_App\CrudDietApp\DietWeb
 C:\Users\ugne.sarakauskaite\Documents\gitTrial\CRUD_Diet_App\CrudDietApp\DietWebAPI\obj\Debug\net5.0\CrudDietAPI.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\ugne.sarakauskaite\Documents\gitTrial\CRUD_Diet_App\CrudDietApp\DietWebAPI\obj\Debug\net5.0\CrudDietAPI.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\ugne.sarakauskaite\Documents\gitTrial\CRUD_Diet_App\CrudDietApp\DietWebAPI\bin\Debug\net5.0\appsettings.Development.json
-C:\Users\ugne.sarakauskaite\Documents\gitTrial\CRUD_Diet_App\CrudDietApp\DietWebAPI\bin\Debug\net5.0\appsettings.json
 C:\Users\ugne.sarakauskaite\Documents\gitTrial\CRUD_Diet_App\CrudDietApp\DietWebAPI\bin\Debug\net5.0\CrudDietAPI.exe
 C:\Users\ugne.sarakauskaite\Documents\gitTrial\CRUD_Diet_App\CrudDietApp\DietWebAPI\bin\Debug\net5.0\CrudDietAPI.deps.json
 C:\Users\ugne.sarakauskaite\Documents\gitTrial\CRUD_Diet_App\CrudDietApp\DietWebAPI\bin\Debug\net5.0\CrudDietAPI.runtimeconfig.json

@@ -5,9 +5,11 @@ VisualStudioVersion = 16.0.31205.134
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CrudDietApp", "CrudDietApp\CrudDietApp.csproj", "{035FDD16-4160-4DB3-9AEE-A6B4C813E499}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrudDietAPI", "DietWebAPI\CrudDietAPI.csproj", "{DB45EDDE-228B-4D1A-ABB0-868E453FFF4E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CrudDietAPI", "DietWebAPI\CrudDietAPI.csproj", "{DB45EDDE-228B-4D1A-ABB0-868E453FFF4E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrudDietLibrary", "DietWebLibrary\CrudDietLibrary.csproj", "{FA7AFB02-E429-4028-9360-6810568518C2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CrudDietLibrary", "DietWebLibrary\CrudDietLibrary.csproj", "{FA7AFB02-E429-4028-9360-6810568518C2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrudDietTests", "CrudDietTests\CrudDietTests.csproj", "{4CF98F38-6E98-4AE1-9E17-379767EFE149}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{FA7AFB02-E429-4028-9360-6810568518C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FA7AFB02-E429-4028-9360-6810568518C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FA7AFB02-E429-4028-9360-6810568518C2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4CF98F38-6E98-4AE1-9E17-379767EFE149}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4CF98F38-6E98-4AE1-9E17-379767EFE149}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4CF98F38-6E98-4AE1-9E17-379767EFE149}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4CF98F38-6E98-4AE1-9E17-379767EFE149}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
