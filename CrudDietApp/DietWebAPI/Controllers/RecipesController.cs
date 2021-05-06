@@ -50,5 +50,19 @@ namespace CrudDietAPI.Controllers
             databases.SaveChanges();
             return Ok(createdRecipe);
         }
+
+        [HttpPut("{id:int}")]
+        public IActionResult UpdateRecipe([FromBody] Recipe recipe, int id)
+        {
+            var recipeWithId = databases.Recipes.FirstOrDefault(r => r.Id == id);
+            if (recipeWithId == null) return NotFound();
+            recipeWithId.Title = recipe.Title;
+            recipeWithId.Ingredients = recipe.Ingredients;
+            recipeWithId.Method = recipe.Method;
+            recipeWithId.PictureUrl = recipe.PictureUrl;
+            recipeWithId.Type = recipe.Type;
+            databases.SaveChanges();
+            return Ok(recipeWithId);
+        }
     }
 }
