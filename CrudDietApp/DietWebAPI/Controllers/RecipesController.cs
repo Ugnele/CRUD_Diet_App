@@ -64,5 +64,18 @@ namespace CrudDietAPI.Controllers
             databases.SaveChanges();
             return Ok(recipeWithId);
         }
+
+        [HttpDelete("{id:int}")]
+        public IActionResult DeleteRecipe([FromBody] Recipe recipe, int id)
+        {
+            var recipeToDelete = databases.Recipes.FirstOrDefault(r => r.Id == id);
+            databases.Recipes.Remove(recipeToDelete);
+            databases.SaveChanges();
+            if (recipeToDelete == null)
+            {
+                return NotFound();
+            }
+            return NoContent();
+        }
     }
 }
