@@ -1,5 +1,6 @@
 ﻿using CrudDietLibrary.Models;
 using CrudDietLibrary.Models.Binding;
+using CrudDietLibrary.Utility;
 using DietWebAPI.Data;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -24,7 +25,7 @@ namespace CrudDietAPI.Controllers
         public IActionResult GetAllUsers()
         {
             var users = databases.Users.ToList();
-            return Ok(users);
+            return Ok(users.GetViewModels());
         }
 
         [HttpGet("{id:int}")]
@@ -32,7 +33,7 @@ namespace CrudDietAPI.Controllers
         {
             var userWithId = databases.Users.FirstOrDefault(r => r.Id == id);
             if (userWithId == null) return NotFound();
-            return Ok(userWithId);
+            return Ok(userWithId.GetViewModel());
         }
 
         [HttpPost("")]
@@ -49,7 +50,7 @@ namespace CrudDietAPI.Controllers
             };
             var createdUser = databases.Users.Add(newUser).Entity;
             databases.SaveChanges();
-            return Ok(createdUser);
+            return Ok(createdUser.GetViewModel());
         }
 
         [HttpPut("{id:int}")]
@@ -64,7 +65,7 @@ namespace CrudDietAPI.Controllers
             userWithId.About = user.About;
             userWithId.PictureUrl = user.PictureUrl;
             databases.SaveChanges();
-            return Ok(userWithId);
+            return Ok(userWithId.GetViewModel());
         }
 
         [HttpDelete("{id:int}")]

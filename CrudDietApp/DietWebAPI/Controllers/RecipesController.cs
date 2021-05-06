@@ -1,5 +1,6 @@
 ﻿using CrudDietLibrary.Models;
 using CrudDietLibrary.Models.Binding;
+using CrudDietLibrary.Utility;
 using DietWebAPI.Data;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -24,7 +25,7 @@ namespace CrudDietAPI.Controllers
         public IActionResult GetAllRecipes()
         {
             var recipes = databases.Recipes.ToList();
-            return Ok(recipes);
+            return Ok(recipes.GetViewModels());
         }
 
         [HttpGet("{id:int}")]
@@ -32,7 +33,7 @@ namespace CrudDietAPI.Controllers
         {
             var recipeWithId = databases.Recipes.FirstOrDefault(r => r.Id == id);
             if (recipeWithId == null) return NotFound();
-            return Ok(recipeWithId);
+            return Ok(recipeWithId.GetViewModel());
         }
 
         [HttpPost("")]
@@ -48,7 +49,24 @@ namespace CrudDietAPI.Controllers
             };
             var createdRecipe = databases.Recipes.Add(newRecipe).Entity;
             databases.SaveChanges();
-            return Ok(createdRecipe);
+            return Ok(createdRecipe.GetViewModel());
+        }
+
+        [HttpPost("user")]
+        public IActionResult CreateUserRecipe([FromBody] AddRecipeBindingModel bm)
+        {
+            var newRecipe = new Recipe
+            {
+                Title = bm.Title,
+                Method = bm.Method,
+                Ingredients = bm.Ingredients,
+                Type = bm.Type,
+                PictureUrl = bm.PictureUrl,
+                CreatedBy = databases.Users.FirstOrDefault(u => u.Id == bm.CreatedById),
+            };
+            var createdRecipe = databases.Recipes.Add(newRecipe).Entity;
+            databases.SaveChanges();
+            return Ok(createdRecipe.GetViewModel());
         }
 
         [HttpPut("{id:int}")]
@@ -62,7 +80,7 @@ namespace CrudDietAPI.Controllers
             recipeWithId.PictureUrl = recipe.PictureUrl;
             recipeWithId.Type = recipe.Type;
             databases.SaveChanges();
-            return Ok(recipeWithId);
+            return Ok(recipeWithId.GetViewModel());
         }
 
         [HttpDelete("{id:int}")]
