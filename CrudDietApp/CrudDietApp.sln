@@ -5,11 +5,16 @@ VisualStudioVersion = 16.0.31205.134
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CrudDietApp", "CrudDietApp\CrudDietApp.csproj", "{035FDD16-4160-4DB3-9AEE-A6B4C813E499}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CrudDietAPI", "DietWebAPI\CrudDietAPI.csproj", "{DB45EDDE-228B-4D1A-ABB0-868E453FFF4E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CrudDietTests", "CrudDietTests\CrudDietTests.csproj", "{4CF98F38-6E98-4AE1-9E17-379767EFE149}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CrudDietLibrary", "DietWebLibrary\CrudDietLibrary.csproj", "{FA7AFB02-E429-4028-9360-6810568518C2}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{CDFCF069-374A-4C56-955C-ECA133730415}"
+	ProjectSection(SolutionItems) = preProject
+		CrudDietAPI\CrudDietAPI.csproj = CrudDietAPI\CrudDietAPI.csproj
+	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrudDietTests", "CrudDietTests\CrudDietTests.csproj", "{4CF98F38-6E98-4AE1-9E17-379767EFE149}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CrudDietAPI", "CrudDietAPI\CrudDietAPI.csproj", "{9D86DB99-CF7A-4291-B094-7F1B2CABC73B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CrudDietLibrary", "CrudDietLibrary\CrudDietLibrary.csproj", "{CEEB92B8-29F2-4CBD-9AC8-7AD290444AE9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,18 +26,18 @@ Global
 		{035FDD16-4160-4DB3-9AEE-A6B4C813E499}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{035FDD16-4160-4DB3-9AEE-A6B4C813E499}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{035FDD16-4160-4DB3-9AEE-A6B4C813E499}.Release|Any CPU.Build.0 = Release|Any CPU
-		{DB45EDDE-228B-4D1A-ABB0-868E453FFF4E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DB45EDDE-228B-4D1A-ABB0-868E453FFF4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DB45EDDE-228B-4D1A-ABB0-868E453FFF4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DB45EDDE-228B-4D1A-ABB0-868E453FFF4E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{FA7AFB02-E429-4028-9360-6810568518C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FA7AFB02-E429-4028-9360-6810568518C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{FA7AFB02-E429-4028-9360-6810568518C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{FA7AFB02-E429-4028-9360-6810568518C2}.Release|Any CPU.Build.0 = Release|Any CPU
 		{4CF98F38-6E98-4AE1-9E17-379767EFE149}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{4CF98F38-6E98-4AE1-9E17-379767EFE149}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4CF98F38-6E98-4AE1-9E17-379767EFE149}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4CF98F38-6E98-4AE1-9E17-379767EFE149}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9D86DB99-CF7A-4291-B094-7F1B2CABC73B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9D86DB99-CF7A-4291-B094-7F1B2CABC73B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9D86DB99-CF7A-4291-B094-7F1B2CABC73B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9D86DB99-CF7A-4291-B094-7F1B2CABC73B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CEEB92B8-29F2-4CBD-9AC8-7AD290444AE9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CEEB92B8-29F2-4CBD-9AC8-7AD290444AE9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CEEB92B8-29F2-4CBD-9AC8-7AD290444AE9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CEEB92B8-29F2-4CBD-9AC8-7AD290444AE9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

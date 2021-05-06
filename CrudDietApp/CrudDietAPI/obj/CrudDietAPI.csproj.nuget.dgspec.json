@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ugne.sarakauskaite\\Documents\\gitTrial\\CRUD_Diet_App\\CrudDietApp\\CrudDietApp\\CrudDietApp.csproj": {}
+    "C:\\Users\\ugne.sarakauskaite\\Documents\\gitTrial\\CRUD_Diet_App\\CrudDietApp\\CrudDietAPI\\CrudDietAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ugne.sarakauskaite\\Documents\\gitTrial\\CRUD_Diet_App\\CrudDietApp\\CrudDietApp\\CrudDietApp.csproj": {
+    "C:\\Users\\ugne.sarakauskaite\\Documents\\gitTrial\\CRUD_Diet_App\\CrudDietApp\\CrudDietAPI\\CrudDietAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ugne.sarakauskaite\\Documents\\gitTrial\\CRUD_Diet_App\\CrudDietApp\\CrudDietApp\\CrudDietApp.csproj",
-        "projectName": "CrudDietApp",
-        "projectPath": "C:\\Users\\ugne.sarakauskaite\\Documents\\gitTrial\\CRUD_Diet_App\\CrudDietApp\\CrudDietApp\\CrudDietApp.csproj",
+        "projectUniqueName": "C:\\Users\\ugne.sarakauskaite\\Documents\\gitTrial\\CRUD_Diet_App\\CrudDietApp\\CrudDietAPI\\CrudDietAPI.csproj",
+        "projectName": "CrudDietAPI",
+        "projectPath": "C:\\Users\\ugne.sarakauskaite\\Documents\\gitTrial\\CRUD_Diet_App\\CrudDietApp\\CrudDietAPI\\CrudDietAPI.csproj",
         "packagesPath": "C:\\Users\\ugne.sarakauskaite\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ugne.sarakauskaite\\Documents\\gitTrial\\CRUD_Diet_App\\CrudDietApp\\CrudDietApp\\obj\\",
+        "outputPath": "C:\\Users\\ugne.sarakauskaite\\Documents\\gitTrial\\CRUD_Diet_App\\CrudDietApp\\CrudDietAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ugne.sarakauskaite\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -51,6 +51,12 @@
               "target": "Package",
               "version": "[5.0.0, )"
             },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
             "Microsoft.EntityFrameworkCore.Relational": {
               "target": "Package",
               "version": "[5.0.0, )"
@@ -68,6 +74,10 @@
             "Pomelo.EntityFrameworkCore.MySql": {
               "target": "Package",
               "version": "[5.0.0-alpha.2, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[5.6.3, )"
             }
           },
           "imports": [
