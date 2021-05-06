@@ -1,4 +1,6 @@
-﻿using DietWebAPI.Data;
+﻿using CrudDietLibrary.Models;
+using CrudDietLibrary.Models.Binding;
+using DietWebAPI.Data;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -31,6 +33,22 @@ namespace CrudDietAPI.Controllers
             var recipeWithId = databases.Recipes.FirstOrDefault(r => r.Id == id);
             if (recipeWithId == null) return NotFound();
             return Ok(recipeWithId);
+        }
+
+        [HttpPost("")]
+        public IActionResult CreateRecipe([FromBody] AddRecipeBindingModel bm)
+        {
+            var newRecipe = new Recipe
+            {
+                Title = bm.Title,
+                Method = bm.Method,
+                Ingredients = bm.Ingredients,
+                Type = bm.Type,
+                PictureUrl = bm.PictureUrl,
+            };
+            var createdRecipe = databases.Recipes.Add(newRecipe).Entity;
+            databases.SaveChanges();
+            return Ok(createdRecipe);
         }
     }
 }
