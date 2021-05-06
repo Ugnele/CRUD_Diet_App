@@ -66,7 +66,7 @@ namespace CrudDietAPI.Controllers
         }
 
         [HttpDelete("{id:int}")]
-        public IActionResult DeleteRecipe([FromBody] Recipe recipe, int id)
+        public IActionResult DeleteRecipe(int id)
         {
             var recipeToDelete = databases.Recipes.FirstOrDefault(r => r.Id == id);
             databases.Recipes.Remove(recipeToDelete);
