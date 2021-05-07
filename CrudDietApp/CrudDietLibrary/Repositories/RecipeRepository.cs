@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace CrudDietLibrary.Repositories
 {
-    public class RecipeRepository : Repository<Recipe>, IRecipeRepository
+    public class RecipeRepository : Repository<Recipe, User>, IRecipeRepository
     {
         public RecipeRepository(ApplicationDbContext dbContext) : base(dbContext) { }
     }

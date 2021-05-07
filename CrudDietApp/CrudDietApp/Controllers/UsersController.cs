@@ -25,7 +25,7 @@ namespace CrudDietApp.Controllers
         //shows existing users
         public IActionResult Index()
         {
-            var users = repo.Users.FindAll();
+            var users = repo.Users.FindAll(r => r.Recipes);//
             //var users = databases.Users.Include(r=>r.Recipes).ToList();
             ViewBag.Users = users;
             return View(users);
@@ -57,8 +57,7 @@ namespace CrudDietApp.Controllers
         [Route("user/details/{id:int}")]
         public IActionResult DetailsOfUser(int id)
         {
-            //INCLUDE
-            var userWithId = repo.Users.FindByCondition(r => r.Id == id).FirstOrDefault();
+            var userWithId = repo.Users.FindByCondition(r => r.Id == id, r => r.Recipes).FirstOrDefault();
             //var userWithId = databases.Users.Include(r=>r.Recipes).FirstOrDefault(u => u.Id == id);
             return View(userWithId);
         }
@@ -138,9 +137,8 @@ namespace CrudDietApp.Controllers
         [Route("recipes/{id:int}")]
         public IActionResult ViewRecipes(int id)
         {
-            //INCLUDE here
             var user = repo.Users.FindByCondition(u => u.Id == id).FirstOrDefault();
-            var recipes = repo.Recipes.FindByCondition(r => r.CreatedBy.Id == id).ToList();
+            var recipes = repo.Recipes.FindByCondition(r => r.CreatedBy.Id == id, u => u.CreatedBy).ToList();
             //var user = databases.Users.FirstOrDefault(u => u.Id == id);
             //var recipes = databases.Recipes.Include(u=>u.CreatedBy).Where(r => r.CreatedBy.Id == id).ToList();
             ViewBag.Username = user.Username;

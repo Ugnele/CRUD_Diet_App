@@ -9,11 +9,13 @@ using System.Threading.Tasks;
 
 namespace CrudDietLibrary.Interfaces
 {
-    public interface IRepository<T>
+    public interface IRepository<T, U>
     {
         T Create(T entity);
-        IEnumerable<T> FindAll();//IEnumerable<T>
-        IEnumerable<T> FindByCondition(Expression<Func<T, bool>> expression);//IEnumerable<T>
+        IEnumerable<T> FindAll();
+        IEnumerable<T> FindAll(Expression<Func<T, U>> expression);
+        IEnumerable<T> FindByCondition(Expression<Func<T, bool>> expression);
+        IEnumerable<T> FindByCondition(Expression<Func<T, bool>> expression, Expression<Func<T, U>> expression2);
         T Update(T entity);
         void Delete(T entity);
     }

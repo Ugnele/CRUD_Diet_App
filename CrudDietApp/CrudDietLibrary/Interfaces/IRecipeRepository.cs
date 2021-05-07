@@ -8,6 +8,6 @@ using System.Threading.Tasks;
 
 namespace CrudDietLibrary.Interfaces
 {
-    public interface IRecipeRepository : IRepository<Recipe> { }
+    public interface IRecipeRepository : IRepository<Recipe, User> { }
 
 }

@@ -48,9 +48,9 @@
                     @Html.DisplayFor(modelItem => item.About)
                 </td>
                 <td>
-                    @if (item.Recipes == null)
+                    @if (item.Recipes.Count == 0)
                     {
-                        @Html.DisplayName("No recipes to show yet :)")
+                    <p>No recipes to show yet :)</p>
                     }
                     else
                     {

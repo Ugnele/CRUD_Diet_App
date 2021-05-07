@@ -7,5 +7,8 @@ using System.Threading.Tasks;
 
 namespace CrudDietLibrary.Interfaces
 {
-    public interface IUserRepository : IRepository<User> { }
+    public interface IUserRepository : IRepository<User, List<Recipe>>
+    {
+        
+    }
 }

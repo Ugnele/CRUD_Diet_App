@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace CrudDietLibrary.Interfaces
 {
-    interface IRecipe
+    public interface IRecipe
     {
         public int Id { get; set; }
         public string Title { get; set; }
