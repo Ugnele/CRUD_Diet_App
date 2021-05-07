@@ -56,6 +56,7 @@ namespace CrudDietApp.Controllers
         [Route("recipes/details/{id:int}")]
         public IActionResult DetailsOfRecipe(int id)
         {
+            //INCLUDE
             var recipeWithId = repo.Recipes.FindByCondition(r => r.Id == id).FirstOrDefault();
             //var recipeWithId = databases.Recipes.Include(u => u.CreatedBy).FirstOrDefault(r => r.Id == id);
             return View(recipeWithId);
