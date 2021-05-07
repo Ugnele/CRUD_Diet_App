@@ -1,4 +1,6 @@
 using CrudDietLibrary.Data;
+using CrudDietLibrary.Interfaces;
+using CrudDietLibrary.Repositories;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -27,6 +29,7 @@ namespace CrudDietApp
         {
             services.AddRouting(r => r.LowercaseUrls = true);
             var connectionString = Configuration.GetConnectionString("DefaultConnection");
+            services.AddScoped<IRepositoryWrapper, RepositoryWrapper>();
             services.AddDbContext<ApplicationDbContext>(options => options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString)));
             services.AddControllersWithViews();
         }

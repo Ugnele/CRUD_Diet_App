@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,7 +8,7 @@ using System.Threading.Tasks;
 namespace CrudDietLibrary.Interfaces
 {
     //To access dbtables and save changes
-    interface IRepositoryWrapper
+    public interface IRepositoryWrapper
     {
         IUserRepository Users { get; }
         IRecipeRepository Recipes { get; }

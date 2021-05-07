@@ -41,19 +41,6 @@
                 <span asp-validation-for="PictureUrl" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="CreatedById" class="control-label">Created by:</label>
-                <select asp-for="CreatedById" class="form-control">
-                    @*@{  int i = 1;//List<User> users;
-                        foreach (var item in ViewBag.Users)
-                        {
-                            <option value="@i">@ViewBag.Username</option>
-                            i++;
-                        }
-                     }*@
-                </select>
-                <span asp-validation-for="CreatedById" class="text-danger"></span>
-            </div>
-            <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-primary" />
             </div>
         </form>

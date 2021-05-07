@@ -20,3 +20,4 @@ C:\Users\ugne.sarakauskaite\Documents\gitTrial\CRUD_Diet_App\CrudDietApp\CrudDie
 C:\Users\ugne.sarakauskaite\Documents\gitTrial\CRUD_Diet_App\CrudDietApp\CrudDietLibrary\obj\Debug\net5.0\CrudDietLibrary.dll
 C:\Users\ugne.sarakauskaite\Documents\gitTrial\CRUD_Diet_App\CrudDietApp\CrudDietLibrary\obj\Debug\net5.0\ref\CrudDietLibrary.dll
 C:\Users\ugne.sarakauskaite\Documents\gitTrial\CRUD_Diet_App\CrudDietApp\CrudDietLibrary\obj\Debug\net5.0\CrudDietLibrary.pdb
+C:\Users\ugne.sarakauskaite\Documents\gitTrial\CRUD_Diet_App\CrudDietApp\CrudDietLibrary\obj\Debug\net5.0\CrudDietLibrary.csprojAssemblyReference.cache

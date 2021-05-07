@@ -8,6 +8,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using CrudDietLibrary.Interfaces;
 
 namespace CrudDietAPI.Controllers
 {
@@ -15,15 +16,19 @@ namespace CrudDietAPI.Controllers
     [ApiController]
     public class RecipesController : ControllerBase
     {
+        //private readonly IRepositoryWrapper repo;
+
         private readonly ApplicationDbContext databases;
-        public RecipesController(ApplicationDbContext applicationDbContext)
+        public RecipesController(ApplicationDbContext applicationDbContext)//IRepositoryWrapper repoWrapper
         {
             databases = applicationDbContext;
+            //repo = repoWrapper;
         }
 
         [HttpGet("")]
         public IActionResult GetAllRecipes()
         {
+            //var recipes = repo.Recipes.FindAll();
             var recipes = databases.Recipes.ToList();
             return Ok(recipes.GetViewModels());
         }
@@ -31,6 +36,7 @@ namespace CrudDietAPI.Controllers
         [HttpGet("{id:int}")]
         public IActionResult GetRecipeWithId(int id)
         {
+            //var recipeWithId = repo.Recipes.FindByCondition(r => r.Id == id);
             var recipeWithId = databases.Recipes.FirstOrDefault(r => r.Id == id);
             if (recipeWithId == null) return NotFound();
             return Ok(recipeWithId.GetViewModel());
@@ -47,6 +53,8 @@ namespace CrudDietAPI.Controllers
                 Type = bm.Type,
                 PictureUrl = bm.PictureUrl,
             };
+            //var createdRecipe = repo.Recipes.Create(newRecipe);
+            //repo.Save();
             var createdRecipe = databases.Recipes.Add(newRecipe).Entity;
             databases.SaveChanges();
             return Ok(createdRecipe.GetViewModel());
@@ -62,8 +70,11 @@ namespace CrudDietAPI.Controllers
                 Ingredients = bm.Ingredients,
                 Type = bm.Type,
                 PictureUrl = bm.PictureUrl,
+                //CreatedBy = repo.Users.FindByCondition(u => u.Id == bm.CreatedById)
                 CreatedBy = databases.Users.FirstOrDefault(u => u.Id == bm.CreatedById),
             };
+            //var createdRecipe = repo.Recipes.Create(newRecipe);
+            //repo.Save();
             var createdRecipe = databases.Recipes.Add(newRecipe).Entity;
             databases.SaveChanges();
             return Ok(createdRecipe.GetViewModel());
@@ -72,6 +83,7 @@ namespace CrudDietAPI.Controllers
         [HttpPut("{id:int}")]
         public IActionResult UpdateRecipe([FromBody] Recipe recipe, int id)
         {
+            //var recipeWithId = repo.Recipes.FindByCondition(r => r.Id == id);
             var recipeWithId = databases.Recipes.FirstOrDefault(r => r.Id == id);
             if (recipeWithId == null) return NotFound();
             recipeWithId.Title = recipe.Title;
@@ -79,6 +91,7 @@ namespace CrudDietAPI.Controllers
             recipeWithId.Method = recipe.Method;
             recipeWithId.PictureUrl = recipe.PictureUrl;
             recipeWithId.Type = recipe.Type;
+            //repo.Save();
             databases.SaveChanges();
             return Ok(recipeWithId.GetViewModel());
         }
@@ -86,6 +99,9 @@ namespace CrudDietAPI.Controllers
         [HttpDelete("{id:int}")]
         public IActionResult DeleteRecipe(int id)
         {
+            //var recipeToDelete = repo.Recipes.FindByCondition(r => r.Id == id);
+            //repo.Recipes.Delete(recipeToDelete);
+            //repo.Save();
             var recipeToDelete = databases.Recipes.FirstOrDefault(r => r.Id == id);
             databases.Recipes.Remove(recipeToDelete);
             databases.SaveChanges();
