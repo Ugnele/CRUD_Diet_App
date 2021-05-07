@@ -1,7 +1,7 @@
 ﻿using CrudDietLibrary.Models;
 using CrudDietLibrary.Models.Binding;
 using CrudDietLibrary.Utility;
-using CrudDietAPI.Data;
+using CrudDietLibrary.Data;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;

@@ -1231,6 +1231,9 @@
       },
       "System.Threading.Tasks.Extensions/4.5.4": {},
       "CrudDietLibrary/1.0.0": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "5.0.0"
+        },
         "runtime": {
           "CrudDietLibrary.dll": {}
         },

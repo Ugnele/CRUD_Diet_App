@@ -1,4 +1,4 @@
-﻿using CrudDietApp.Data;
+﻿using CrudDietLibrary.Data;
 using CrudDietLibrary.Models;
 using CrudDietLibrary.Models.Binding;
 using Microsoft.AspNetCore.Mvc;
@@ -12,9 +12,9 @@ namespace CrudDietApp.Controllers
 {
     public class RecipesController : Controller
     {
-        private readonly AppDatabases databases;
+        private readonly ApplicationDbContext databases;
 
-        public RecipesController(AppDatabases appDatabases)
+        public RecipesController(ApplicationDbContext appDatabases)
         {
             databases = appDatabases;
         }

@@ -1,4 +1,4 @@
-using CrudDietApp.Data;
+using CrudDietLibrary.Data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -27,7 +27,7 @@ namespace CrudDietApp
         {
             services.AddRouting(r => r.LowercaseUrls = true);
             var connectionString = Configuration.GetConnectionString("DefaultConnection");
-            services.AddDbContext<AppDatabases>(options => options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString)));
+            services.AddDbContext<ApplicationDbContext>(options => options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString)));
             services.AddControllersWithViews();
         }
 
