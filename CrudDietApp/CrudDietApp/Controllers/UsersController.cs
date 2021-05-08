@@ -132,25 +132,5 @@ namespace CrudDietApp.Controllers
             //databases.SaveChanges();
             return RedirectToAction("Index");
         }
-
-        //Display All users recipes
-        [Route("recipes/{id:int}")]
-        public IActionResult ViewRecipes(int id)
-        {
-            var user = repo.Users.FindByCondition(u => u.Id == id).FirstOrDefault();
-            var recipes = repo.Recipes.FindByCondition(r => r.CreatedBy.Id == id, u => u.CreatedBy).ToList();
-            //var user = databases.Users.FirstOrDefault(u => u.Id == id);
-            //var recipes = databases.Recipes.Include(u=>u.CreatedBy).Where(r => r.CreatedBy.Id == id).ToList();
-            ViewBag.Username = user.Username;
-            return View(recipes);
-        }
-
-        //Authentication
-        public Boolean Login(int id, string username, string password)
-        {
-            var user = repo.Users.FindByCondition(u => u.Id == id).FirstOrDefault();
-            //var user = databases.Users.FirstOrDefault(u => u.Id == id);
-            return user.Username == username && user.Password == password;
-        }
     }
 }
