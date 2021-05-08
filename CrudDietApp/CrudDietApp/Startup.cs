@@ -59,6 +59,14 @@ namespace CrudDietApp
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
+                endpoints.MapControllerRoute(
+                     "recipes",
+                     "{recipes}",
+                     new { controller = "Recipes", action = "Index" });
+                endpoints.MapControllerRoute(
+                    "users",
+                    "{users}",
+                    new { controller = "Users", action = "Index" });
             });
         }
     }
