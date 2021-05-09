@@ -22,7 +22,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\CrudDietLibrary\CrudDietLibrary.csproj" />
-    <ProjectReference Include="..\DietWebLibrary\CrudDietLibrary.csproj" />
   </ItemGroup>
 
 </Project>
