@@ -44,7 +44,6 @@
   <ItemGroup>
     <ProjectReference Include="..\CrudDietApp\CrudDietApp.csproj" />
     <ProjectReference Include="..\CrudDietLibrary\CrudDietLibrary.csproj" />
-    <ProjectReference Include="..\DietWebLibrary\CrudDietLibrary.csproj" />
   </ItemGroup>
   <PropertyGroup>
     <SsdtUnitTestVersion>3.1</SsdtUnitTestVersion>
